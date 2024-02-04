@@ -1,22 +1,36 @@
-const txtInput = document.querySelector(".inputs input"),
-checkBtn = document.querySelector(".inputs button"),
-infoTxt = document.querySelector(".info-txt");
-let filterInput;
+function buttonClick(){
+    const fname = document.getElementById("first").value; //first name
+    const lname = document.getElementById("last").value; //last name
+    const element = document.getElementById("full") //combining both first and last name
+    element.value = fname+""+lname //combining first and last anme
+}
+function mymessage() {
+    alert("Thank you! Remember, knowledge is power")
+} //pop up displaying message
 
-checkBtn.addEventListener("click", () => {
-    let reverseInput = filterInput.split("").reverse().join("");
-    infoTxt.style.display = "block";
-    if(filterInput != reverseInput) {
-        return infoTxt.innerHTML = `No, <span>'${txtInput.value}'</span> isn't a palindrome!`;
-    }
-    infoTxt.innerHTML = `Yes, <span>'${txtInput.value}'</span> is a palindrome!`;
-});
+function formValidation()  //Zip Code start
+{  
+    var zip = document.reg.zip; 
+    allnumeric(zip);
 
-txtInput.addEventListener("keyup", () => {
-    filterInput = txtInput.value.toLowerCase().replace(/[^A-Z0-9]/ig, "");
-    if(filterInput) {
-        return checkBtn.classList.add("active");
+function allnumeric(zip)
+{   
+    var numbers = /^[0-9]+$/;  //identifying numbers
+    if(zip.value.match(numbers))  
+    {  
+        document.getElementById("msg").innerHTML=("OK &#x2713;");
+        msg.style.color="green";
+    }  
+    else if (zip.numbers < 5) //no more than 5
+    {
+        msg.innerHTML=("Has to be 5 numbers."); //if more than 5
+        msg.style.color="red";
     }
-    infoTxt.style.display = "none";
-    checkBtn.classList.remove("active");
-});
+    else
+    {  
+        msg.innerHTML=("Numbers only please."); //error if anything than numbers
+        msg.style.color="red";
+    }  
+};  
+    return false;
+};;
