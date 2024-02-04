@@ -1,20 +1,27 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Jeffery Laskey-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">  
-    <title>Palindrome Checker in JavaScript | CodingNepal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>User Input</title>
+    <link rel="stylesheet" href="style.css"><!--Designing-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Palindrome Checker</h1>
-        <p>A palindrome is a word or phrase that reads the same backwards as forwards, e.g. level, refer.</p>
+        <h1>User Input</h1>
+        <p>I would like to get some basic information from you for a secret message!</p><!--Title-->
       </header>
-      <div class="inputs">
-        <input type="text" spellcheck="false" placeholder="Enter text or number">
-        <button>Check Palindrome</button>
+      <!--This is where you input you basic information-->
+        <form>
+        <input type="text" name="file-name" id="first" onchange="buttonClick()" placeholder="First Name" required=required><br><br><!--First Name-->
+        <input type="text" name="file-name" id="last" onchange="buttonClick()" placeholder="Last Name" required=required ><br><br><!--Last Name-->
+        <input type="text" name="file-name" id="full" placeholder="Full Name" maxlength="20"><br><br><!--Displaying Full Name-->
+        <input type="text" id="zip" placeholder="Zip Code" maxlength="5" name="zip" required="required"><!--Zip Code-->
+    </p><br><br> <!--These help with spaces-->
+    <button type="submit" onclick="mymessage()">Submit </button>
+    
+  </form>
       </div>
       <p class="info-txt"></p>
     </div>
